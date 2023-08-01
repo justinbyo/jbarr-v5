@@ -179,6 +179,10 @@ section.footnotes p {
     
 }
 
+section.footnotes strong {
+    font-weight: 700;
+}
+
 section.footnotes p a {
     border-bottom-width: 1px;
     color: var(--light-grey-ish);
@@ -207,7 +211,7 @@ section.footer p {
 }
 
 section.footer a {
-    color: #ffffff;
+    color: var(--blue);
 }
 
 section.footer p,
@@ -221,7 +225,7 @@ section.footer a {
 section.footer a {
 
     &:hover {    
-        color: var(--orange);
+        color: var(--light-grey);
     }
 }
 
@@ -300,6 +304,10 @@ sup {
     &:after {
         content: "]";
     }
+}
+
+sup a {
+    border-bottom: 0;
 }
 
 /* Media queries */
