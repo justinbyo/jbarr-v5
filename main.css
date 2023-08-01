@@ -239,7 +239,7 @@ section.footer a {
 section.footer p,
 section.footer a {
     font-family: lato;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 1rem;
     border-bottom: 0;
 }
@@ -276,6 +276,7 @@ h2 {
 p {
     font-family: "Noto Serif";
     font-size: 1.25rem;
+    font-weight: 400;
     line-height:1.65;
 }
 
