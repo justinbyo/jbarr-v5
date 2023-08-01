@@ -163,9 +163,31 @@ section.cta a {
     display: block;
     font-family: "Lato";
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 700;
     margin:0 var(--margin-small);
     padding: var(--margin-small);
+}
+
+
+section.cta a.cta--email {
+    background-color: var(--orange);
+    border-color: var(--dark-grey);
+    color: var(--dark-grey);
+
+    &:hover {
+        background-color: var(--orange);
+        border-color: var(--orange);
+    }
+}
+
+section.cta .cta--linkedin {
+    border-color: var(--light-grey-ish);
+    color: var(--light-grey-ish);
+
+    &:hover {
+        border-color: var(--orange);
+        color: var(--orange);
+    }
 }
 
 section.footnotes {
@@ -229,16 +251,7 @@ section.footer a {
     }
 }
 
-section.cta .cta a {
-    font-weight: 700;
-}
 
-
-section.cta a.cta--email {
-    background-color: var(--dark-orange);
-    border-color: var(--dark-orange);
-    color: #ffffff;
-}
 
 
 h1 {
@@ -299,10 +312,12 @@ sup {
 
     &:before {
         content: "[";
+        color: var(--orange);
     }
 
     &:after {
         content: "]";
+        color: var(--orange);
     }
 }
 
@@ -315,9 +330,12 @@ sup a {
 @media (prefers-color-scheme: dark)  {
     
     section.cta a.cta--email {
+
+        border-color: var(--orange);
+
         &:hover {
-            background-color: var(--orange);
-            border-color: var(--orange);
+            background-color: var(--light-grey);
+            border-color: var(--light-grey);
         }
     }
     
@@ -334,22 +352,6 @@ sup a {
 
 @media (prefers-color-scheme: light) {
 
-    section.cta a.cta--email {
-        &:hover {
-            background-color: var(--orange);
-            border-color: var(--orange);
-        }
-    }
-
-    section.cta .cta--linkedin {
-        border-color: var(--light-grey-ish);
-        color: var(--light-grey-ish);
-
-        &:hover {
-            border-color: var(--orange);
-            color: var(--orange);
-        }
-    }
 }
 
 /* Styles for devices with a maximum width of 767px (e.g., mobile phones in portrait mode) */
