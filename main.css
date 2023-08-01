@@ -51,6 +51,31 @@ table {
 
 /* Theme */
 
+:root {
+    --blue: #7fadc6;
+    
+    --light-orange: #ffd79c;
+    --orange: #ff9900;
+    --dark-orange: #c94f00;
+    
+
+    --border-small: 3px;
+    --border-big: 6px;
+
+    --margin-small: 30px;
+    --margin-medium: 60px;
+    --margin-big: 90px;
+
+    --light-grey:#f9f9f9;
+    --light-grey-ish: #555555;
+    --dark-grey: #24292e;
+}
+
+body {
+    background-color: var(--light-grey);
+    color: var(--dark-grey);
+}
+
 @media (prefers-color-scheme: dark) {
     
     :root {
@@ -69,19 +94,7 @@ table {
 
 @media (prefers-color-scheme: light) {
 
-    :root {
-        --light-grey-ish: #555555;
-    }
-
-    body {
-        background-color: var(--light-grey);
-        color: var(--dark-grey);
-
-    }
-
-    a {
-        color: var(--dark-grey);
-    }
+    
 }
 
 section {
@@ -129,24 +142,11 @@ From website v3
     @2x-standard-border-size: 2 * @standard-border-size;
 */
 
-:root {
-    --blue: #7fadc6;
-    
-    --light-orange: #ffd79c;
-    --orange: #ff9900;
-    --dark-orange: #c94f00;
-    
 
-    --border-small: 3px;
-    --border-big: 6px;
 
-    --margin-small: 30px;
-    --margin-medium: 60px;
-    --margin-big: 90px;
 
-    --light-grey:#f9f9f9;
-    --dark-grey: #24292e;
-}
+
+
 
 section.cta {
     display: flex;
@@ -299,6 +299,7 @@ p.subtitle {
 
 a { 
     border-bottom:var(--border-small) solid var(--orange);
+    color: var(--dark-grey);
     font-weight: 700;
     text-decoration: none;
     
@@ -330,6 +331,10 @@ sup a {
 
 @media (prefers-color-scheme: dark)  {
     
+    a {
+        color: var(--light-grey);
+    }
+    
     section.cta a.cta--email {
 
         border-color: var(--orange);
@@ -348,6 +353,11 @@ sup a {
             border-color: var(--orange);
             color: var(--orange);
         }
+    }
+
+
+    .footer-wrapper {
+        background-color:#111111;
     }
 }
 
