@@ -293,7 +293,7 @@ p.subtitle {
     /* Say hey back... */
     font-family: "Noto Serif";
     font-size: 1.5rem;
-    line-height:2;
+    line-height: 1;
     margin-bottom: var(--margin-small);
 }
 
@@ -395,7 +395,7 @@ sup a {
         /* Say hey back... */
         font-family: "Noto Serif";
         font-size: 1rem;
-        line-height:1;
+        line-height:2;
         margin-bottom: var(--margin-small);
     }
   }
