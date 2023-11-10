@@ -166,6 +166,7 @@ section.cta a {
     font-weight: 700;
     margin:0 var(--margin-small);
     padding: var(--margin-small);
+    text-align:center;
 }
 
 
@@ -173,21 +174,21 @@ section.cta a.cta--email {
     background-color: var(--orange);
     border-color: var(--dark-grey);
     color: var(--dark-grey);
+}
 
-    &:hover {
-        background-color: var(--orange);
-        border-color: var(--orange);
-    }
+section.cta a.cta--email:hover {
+    background-color: var(--orange);
+    border-color: var(--orange);
 }
 
 section.cta .cta--linkedin {
     border-color: var(--light-grey-ish);
     color: var(--light-grey-ish);
+}
 
-    &:hover {
-        border-color: var(--orange);
-        color: var(--orange);
-    }
+section.cta .cta--linkedin:hover {
+    border-color: var(--orange);
+    color: var(--orange);
 }
 
 section.footnotes {
@@ -209,10 +210,10 @@ section.footnotes p a {
     border-bottom-width: 1px;
     color: var(--light-grey-ish);
     font-weight: 500;
+}
 
-    &:hover {
-        color: var(--orange);
-    }
+section.footnotes p a:hover {
+    color: var(--orange);
 }
 
 .footer-wrapper {
@@ -229,7 +230,7 @@ section.footer li {
 }
 
 section.footer p {
- color: #b6b6b6;)
+ color: #b6b6b6;
 }
 
 section.footer a {
@@ -244,15 +245,9 @@ section.footer a {
     border-bottom: 0;
 }
 
-section.footer a {
-
-    &:hover {    
-        color: var(--light-grey);
-    }
+section.footer a:hover {
+    color: var(--light-grey);
 }
-
-
-
 
 h1 {
     font-family: "Lato";
@@ -302,25 +297,25 @@ a {
     color: var(--dark-grey);
     font-weight: 700;
     text-decoration: none;
-    
-    &:hover {
-        color: var(--orange)
-    }
+}
+
+a:hover {
+    color: var(--orange);
 }
 
 sup {
     vertical-align: super;
     font-size: .75em;
+}
 
-    &:before {
-        content: "[";
-        color: var(--orange);
-    }
+sup:before {
+    content: "[";
+    color: var(--orange);
+}
 
-    &:after {
-        content: "]";
-        color: var(--orange);
-    }
+sup:after {
+    content: "]";
+    color: var(--orange);
 }
 
 sup a {
@@ -336,23 +331,22 @@ sup a {
     }
     
     section.cta a.cta--email {
-
         border-color: var(--orange);
+    }
 
-        &:hover {
-            background-color: var(--light-grey);
-            border-color: var(--light-grey);
-        }
+    section.cta a.cta--email:hover {
+        background-color: var(--light-grey);
+        border-color: var(--light-grey);
     }
     
     section.cta a.cta--linkedin {
         border-color: var(--light-grey);
         color: var(--light-grey);
+    }
 
-        &:hover {
-            border-color: var(--orange);
-            color: var(--orange);
-        }
+    section.cta a.cta--linkedin:hover {
+        border-color: var(--orange);
+        color: var(--orange);
     }
 
 
@@ -371,10 +365,6 @@ sup a {
 
     section.hero {
         margin-top: var(--margin-medium);
-    }
-    
-    h1 {
-
     }
 
     h2 {
