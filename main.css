@@ -230,7 +230,7 @@ section.footer li {
 }
 
 section.footer p {
- color: #b6b6b6;)
+ color: #b6b6b6;
 }
 
 section.footer a {
@@ -365,10 +365,6 @@ sup a {
 
     section.hero {
         margin-top: var(--margin-medium);
-    }
-    
-    h1 {
-
     }
 
     h2 {
