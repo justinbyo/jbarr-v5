@@ -1,11 +1,11 @@
 {
   "name": "jbarr-v5",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch scss/styles.scss css/styles.css",
-    "start": "live-server"
+    "start": "live-server --entry-file=site/index.html --mount=/:site"
   },
   "keywords": [],
   "author": "",
