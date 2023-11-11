@@ -1,0 +1,423 @@
+/* Reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Theme */
+
+:root {
+    --blue: #7fadc6;
+    
+    --light-orange: #ffd79c;
+    --orange: #ff9900;
+    --dark-orange: #c94f00;
+    
+
+    --border-small: 3px;
+    --border-big: 6px;
+
+    --margin-small: 30px;
+    --margin-medium: 60px;
+    --margin-big: 90px;
+
+    --light-grey:#f9f9f9;
+    --light-grey-ish: #555555;
+    --dark-grey: #24292e;
+}
+
+body {
+    background-color: var(--light-grey);
+    color: var(--dark-grey);
+}
+
+@media (prefers-color-scheme: dark) {
+    
+    :root {
+        --light-grey-ish: #b6b6b6;
+    }
+    
+    body {
+        background-color: #1b1f23;
+        color: var(--light-grey);
+    }
+
+    a {
+        color: var(--light-grey);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+
+    
+}
+
+section {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+header {
+    border-bottom: var(--border-big) solid var(--blue);
+    padding:0 20px;
+}
+
+section.navigation {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+section.hero {
+    margin-top: var(--margin-big);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    margin-bottom:var(--margin-small);
+}
+
+
+
+/* Fonts */
+
+/* 
+From website v3
+    @light-gray: #f9f9f9;
+    @black: #222222;
+    @white:#ffffff;
+    @light-grey:#f1f1f1;
+    @grey:#989898;
+    @dark-grey:#666666;
+    @light-orange:;
+
+    @standard-border-size: 6px;
+    @2x-standard-border-size: 2 * @standard-border-size;
+*/
+
+
+
+
+
+
+
+section.cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: var(--margin-medium) 0;
+}
+
+section.cta a {
+    border-radius: 0 0 0 0;
+    border-style: solid;
+    border-width: var(--border-small);
+    box-sizing: border-box;
+    display: block;
+    font-family: "Lato";
+    font-size: 1rem;
+    font-weight: 700;
+    margin:0 var(--margin-small);
+    padding: var(--margin-small);
+    text-align:center;
+}
+
+
+section.cta a.cta--email {
+    background-color: var(--orange);
+    border-color: var(--dark-grey);
+    color: var(--dark-grey);
+}
+
+section.cta a.cta--email:hover {
+    background-color: var(--orange);
+    border-color: var(--orange);
+}
+
+section.cta .cta--linkedin {
+    border-color: var(--light-grey-ish);
+    color: var(--light-grey-ish);
+}
+
+section.cta .cta--linkedin:hover {
+    border-color: var(--orange);
+    color: var(--orange);
+}
+
+section.footnotes {
+    border-top: var(--border-small) solid var(--light-grey-ish);
+    padding: var(--margin-medium) 20px;
+}
+
+section.footnotes p {
+    color: var(--light-grey-ish);
+    font-size: .9rem;
+    
+}
+
+section.footnotes strong {
+    font-weight: 700;
+}
+
+section.footnotes p a {
+    border-bottom-width: 1px;
+    color: var(--light-grey-ish);
+    font-weight: 500;
+}
+
+section.footnotes p a:hover {
+    color: var(--orange);
+}
+
+.footer-wrapper {
+    background-color:var(--dark-grey);
+}
+
+section.footer {
+    padding: var(--margin-medium) 20px;
+}
+
+section.footer p, 
+section.footer li {
+    margin-bottom: 1rem;
+}
+
+section.footer p {
+ color: #b6b6b6;
+}
+
+section.footer a {
+    color: var(--blue);
+}
+
+section.footer p,
+section.footer a {
+    font-family: lato;
+    font-weight: 400;
+    font-size: 1rem;
+    border-bottom: 0;
+}
+
+section.footer a:hover {
+    color: var(--light-grey);
+}
+
+h1 {
+    font-family: "Lato";
+    font-weight: 900;
+    font-size: 1rem;
+}
+
+h1 span {
+    color:var(--light-grey-ish);
+    font-weight: 500;
+}
+
+h2 {
+    /* "I'm a design-driven..." */
+    display: inline;
+    font-family: "Noto Serif";
+    font-size: 1.5rem;
+    line-height:2;
+}
+
+p {
+    font-family: "Noto Serif";
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height:1.65;
+}
+
+p.strong {
+    /* This is the headline "Hey..." */
+    font-family: "Lato";
+    font-weight: 900;
+    font-size: 3rem;
+    line-height:1;
+    margin-bottom: var(--margin-small);
+}
+
+p.subtitle {
+    /* Say hey back... */
+    font-family: "Noto Serif";
+    font-size: 1.5rem;
+    line-height: 1;
+    margin-bottom: var(--margin-small);
+}
+
+a { 
+    border-bottom:var(--border-small) solid var(--orange);
+    color: var(--dark-grey);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--orange);
+}
+
+sup {
+    vertical-align: super;
+    font-size: .75em;
+}
+
+sup:before {
+    content: "[";
+    color: var(--orange);
+}
+
+sup:after {
+    content: "]";
+    color: var(--orange);
+}
+
+sup a {
+    border-bottom: 0;
+}
+
+/* Media queries */
+
+@media (prefers-color-scheme: dark)  {
+    
+    a {
+        color: var(--light-grey);
+    }
+    
+    section.cta a.cta--email {
+        border-color: var(--orange);
+    }
+
+    section.cta a.cta--email:hover {
+        background-color: var(--light-grey);
+        border-color: var(--light-grey);
+    }
+    
+    section.cta a.cta--linkedin {
+        border-color: var(--light-grey);
+        color: var(--light-grey);
+    }
+
+    section.cta a.cta--linkedin:hover {
+        border-color: var(--orange);
+        color: var(--orange);
+    }
+
+
+    .footer-wrapper {
+        background-color:#111111;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+
+}
+
+/* Styles for devices with a maximum width of 767px (e.g., mobile phones in portrait mode) */
+@media (max-width: 767px) {
+    /* Add your CSS styles here for smaller screens */
+
+    section.hero {
+        margin-top: var(--margin-medium);
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height:1.75;
+    }
+    
+    p.strong {
+        /* This is the headline "Hey..." */
+        font-size: 1.875rem;
+    }
+    
+    p.subtitle {
+        /* Say hey back... */
+        font-family: "Noto Serif";
+        font-size: 1rem;
+        line-height:2;
+        margin-bottom: var(--margin-small);
+    }
+  }
+
+  @media (max-width: 580px) {
+    
+    section.cta {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin: var(--margin-medium) 0;
+    }
+
+    section.cta .cta--email {
+        margin-bottom: var(--margin-small);
+    }
+
+  }
+  
+  
+  /* Styles for devices with a minimum width of 768px and a maximum width of 991px (e.g., tablets) */
+  @media (min-width: 768px) and (max-width: 991px) {
+    /* Add your CSS styles here for medium-sized screens like tablets */
+  }
+  
+  /* Styles for devices with a minimum width of 992px and a maximum width of 1199px (e.g., desktops and smaller laptops) */
+  @media (min-width: 992px) and (max-width: 1199px) {
+    /* Add your CSS styles here for larger screens like desktops and smaller laptops */
+  }
+  
+  /* Styles for devices with a minimum width of 1200px and larger (e.g., larger desktops and laptops) */
+  @media (min-width: 1200px) {
+    /* Add your CSS styles here for the largest screens */
+  }  
