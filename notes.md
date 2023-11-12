@@ -5,8 +5,8 @@
 ## How I set it up
 
 - install node with brew, also installs npm
-- initialize new project: `npm init -y` creates package.json filewuth default values and installs node module folder
-- dependency installation, these get added automatically to package.json
+- initialize new project: `npm init -y` creates package.json file with default values and installs node module folder
+- dependency installation, these get added automatically to package.json with `--save-dev` flag
     - [x] `npm install sass --save-dev`
     - [x] `npm install live-server --save-dev`
 - set up scripts
@@ -20,7 +20,7 @@
 
 ## Installing on new machine
 
-- Make sure you have node and npm via brew
+- Make sure you have node and npm (which comes with node) via brew
 - Best case: run `npm install` to automatically install dependencies in package.json. Otherwise:
     - [x] `npm install sass`
     - [x] `npm install live-server`
