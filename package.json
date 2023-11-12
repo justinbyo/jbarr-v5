@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch scss/styles.scss site/css/styles.css",
-    "start": "live-server --entry-file=site/index.html --mount=/:site"
+    "sass": "sass --watch scss/styles.scss docs/css/styles.css",
+    "start": "live-server --entry-file=docs/index.html --mount=/:docs"
   },
   "keywords": [],
   "author": "",

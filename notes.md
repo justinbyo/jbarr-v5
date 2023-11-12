@@ -1,6 +1,6 @@
 ## Important
 
-- `/site` is where the site build goes and reflects the version of the site that goes live
+- `/docs` is where the site build goes and reflects the version of the site that goes live
 
 ## How I set it up
 
@@ -34,7 +34,7 @@
 
 ## Important changes I've made
 
-- I moved all the stuff that will live in `gh-pages` branch into the `/site` directory to keep things clean. This includes:
+- I moved all the stuff that will live in `gh-pages` branch into the `/docs` directory to keep things clean. This includes:
     -  `index.html`
     - cname
     - `/images`
@@ -42,10 +42,10 @@
 - Stuff I do not want live on gh-pages include:
     - `package.json` and node modulea
     - all the SASS stuff in `/scss`
-- I updated the live-server `start` script to to reflect `/site` as the main directory to watch
-    - Use `site/index.html` as the home page to load
-    - Treat `/site` as the localhost root
-    - See: `"start": "live-server --entry-file=site/index.html --mount=/:site"`    
+- I updated the live-server `start` script to to reflect `/docs` as the main directory to watch
+    - Use `docs/index.html` as the home page to load
+    - Treat `/docs` as the localhost root
+    - See: `"start": "live-server --entry-file=docs/index.html --mount=/:docs"`    
 
 ## To do
 
