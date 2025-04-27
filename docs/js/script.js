@@ -24,11 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (isDark) {
       document.documentElement.classList.add('dark-theme');
-      themeToggleIcon.textContent = '☀️';
+    themeToggleIcon.textContent = '\u2600\uFE0F';
       console.log('DEBUG: Dark theme applied, icon set to sun');
     } else {
       document.documentElement.classList.remove('dark-theme');
-      themeToggleIcon.textContent = '🌙';
+    themeToggleIcon.textContent = '\u{1F319}';
       console.log('DEBUG: Light theme applied, icon set to moon');
     }
     
