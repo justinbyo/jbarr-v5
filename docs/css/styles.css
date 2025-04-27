@@ -74,18 +74,26 @@ body {
   color: var(--dark-grey);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --light-grey-ish: #b6b6b6;
-  }
-  body {
-    background-color: #1b1f23;
-    color: var(--light-grey);
-  }
-  a {
-    color: var(--light-grey);
-  }
+/* Dark theme styles when .dark-theme class is applied to root */
+:root.dark-theme {
+  --light-grey-ish: #b6b6b6;
 }
+
+:root.dark-theme body {
+  background-color: #1b1f23;
+  color: var(--light-grey);
+}
+
+:root.dark-theme a {
+  color: var(--light-grey);
+}
+
+/* Use the media query only to set initial theme based on system preference */
+@media (prefers-color-scheme: dark) {
+  /* These styles will be applied only on initial load if system prefers dark */
+  /* The JS will then add the .dark-theme class to maintain this state */
+}
+
 section {
   margin: 0 auto;
   max-width: 800px;
@@ -101,6 +109,28 @@ section.navigation {
   padding: 20px 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+#theme-toggle {
+  background: none;
+  border: var(--border-small) solid var(--blue);
+  border-radius: 50%;
+  color: var(--dark-grey);
+  cursor: pointer;
+  font-size: 1.2rem;
+  height: 35px;
+  width: 35px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+  background-color: var(--blue);
+  color: var(--light-grey);
 }
 
 section.hero {
@@ -300,28 +330,28 @@ sup a {
 }
 
 /* Media queries */
-@media (prefers-color-scheme: dark) {
-  a {
-    color: var(--light-grey);
-  }
-  section.cta a.cta--email {
-    border-color: var(--orange);
-  }
-  section.cta a.cta--email:hover {
-    background-color: var(--light-grey);
-    border-color: var(--light-grey);
-  }
-  section.cta a.cta--linkedin {
-    border-color: var(--light-grey);
-    color: var(--light-grey);
-  }
-  section.cta a.cta--linkedin:hover {
-    border-color: var(--orange);
-    color: var(--orange);
-  }
-  .footer-wrapper {
-    background-color: #111111;
-  }
+/* Dark theme styles for various elements */
+:root.dark-theme section.cta a.cta--email {
+  border-color: var(--orange);
+}
+
+:root.dark-theme section.cta a.cta--email:hover {
+  background-color: var(--light-grey);
+  border-color: var(--light-grey);
+}
+
+:root.dark-theme section.cta a.cta--linkedin {
+  border-color: var(--light-grey);
+  color: var(--light-grey);
+}
+
+:root.dark-theme section.cta a.cta--linkedin:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+:root.dark-theme .footer-wrapper {
+  background-color: #111111;
 }
 /* Styles for devices with a maximum width of 767px (e.g., mobile phones in portrait mode) */
 @media (max-width: 767px) {
