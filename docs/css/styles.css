@@ -65,7 +65,7 @@ table {
   --margin-medium: 60px;
   --margin-big: 90px;
   --light-grey:#f9f9f9;
-  --light-grey-ish: #555555;
+  --light-grey-ish: #555555; /* this works for both themes */
   --dark-grey: #24292e;
 }
 
@@ -125,7 +125,6 @@ section.navigation {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
 }
 
 #theme-toggle:hover {
@@ -190,8 +189,8 @@ section.cta a.cta--email:hover {
 }
 
 section.cta .cta--linkedin {
-  border-color: var(--light-grey-ish);
-  color: var(--light-grey-ish);
+  border-color: var(--dark-grey);
+  color: var(--dark-grey);
 }
 
 section.cta .cta--linkedin:hover {
@@ -199,8 +198,21 @@ section.cta .cta--linkedin:hover {
   color: var(--orange);
 }
 
-section.footnotes {
+section.footer {
   border-top: var(--border-small) solid var(--light-grey-ish);
+  padding-top: var(--margin-small);
+  padding-bottom: var(--margin-small);
+  border: var(--border-small) dashed var(--blue);
+}
+
+section.footer li {
+  font-family: "Lato";
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+section.footnotes {
+  /* border-top: var(--border-small) solid var(--light-grey-ish); */
   padding: var(--margin-medium) 20px;
 }
 
@@ -221,39 +233,6 @@ section.footnotes p a {
 
 section.footnotes p a:hover {
   color: var(--orange);
-}
-
-.footer-wrapper {
-  background-color: var(--dark-grey);
-}
-
-section.footer {
-  padding: var(--margin-medium) 20px;
-}
-
-section.footer p,
-section.footer li {
-  margin-bottom: 1rem;
-}
-
-section.footer p {
-  color: #b6b6b6;
-}
-
-section.footer a {
-  color: var(--blue);
-}
-
-section.footer p,
-section.footer a {
-  font-family: lato;
-  font-weight: 400;
-  font-size: 1rem;
-  border-bottom: 0;
-}
-
-section.footer a:hover {
-  color: var(--light-grey);
 }
 
 h1 {
@@ -310,6 +289,13 @@ a:hover {
   color: var(--orange);
 }
 
+li {
+  font-family: "Noto Serif";
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
 sup {
   vertical-align: super;
   font-size: 0.75em;
@@ -331,6 +317,10 @@ sup a {
 
 /* Media queries */
 /* Dark theme styles for various elements */
+:root.dark-theme sup a:hover {
+  color: var(--orange)
+}
+
 :root.dark-theme section.cta a.cta--email {
   border-color: var(--orange);
 }
@@ -350,9 +340,8 @@ sup a {
   color: var(--orange);
 }
 
-:root.dark-theme .footer-wrapper {
-  background-color: #111111;
-}
+
+
 /* Styles for devices with a maximum width of 767px (e.g., mobile phones in portrait mode) */
 @media (max-width: 767px) {
   /* Add your CSS styles here for smaller screens */
