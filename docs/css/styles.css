@@ -88,6 +88,10 @@ body {
   color: var(--light-grey);
 }
 
+:root.dark-theme a:hover {
+  color: var(--orange);
+}
+
 /* Use the media query only to set initial theme based on system preference */
 @media (prefers-color-scheme: dark) {
   /* These styles will be applied only on initial load if system prefers dark */
@@ -295,7 +299,7 @@ li {
   font-family: "Noto Serif";
   font-size: 1.25rem;
   font-weight: 400;
-  line-height: 1.65;
+  line-height: 1.85;
 }
 
 sup {
@@ -330,6 +334,7 @@ sup a {
 :root.dark-theme section.cta a.cta--email:hover {
   background-color: var(--light-grey);
   border-color: var(--light-grey);
+  color: var(--dark-grey)
 }
 
 :root.dark-theme section.cta a.cta--linkedin {
