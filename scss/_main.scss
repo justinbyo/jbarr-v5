@@ -76,8 +76,8 @@ body {
     color: var(--dark-grey);
 }
 
-/* Dark theme support via class (for manual toggle) */
-.dark-theme {
+/* Dark theme mixin to avoid duplication */
+@mixin dark-theme-base {
     --light-grey-ish: #b6b6b6;
     
     body {
@@ -90,20 +90,15 @@ body {
     }
 }
 
+/* Dark theme support via class (for manual toggle) */
+.dark-theme {
+    @include dark-theme-base;
+}
+
 /* Dark theme support via media query (for system preference) */
 @media (prefers-color-scheme: dark) {
-    
     :root {
-        --light-grey-ish: #b6b6b6;
-    }
-    
-    body {
-        background-color: #1b1f23;
-        color: var(--light-grey);
-    }
-
-    a {
-        color: var(--light-grey);
+        @include dark-theme-base;
     }
 }
 
@@ -127,7 +122,7 @@ section.navigation {
     padding: 20px 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; // Vertically center theme toggle button with heading
 }
 
 #theme-toggle {
@@ -359,8 +354,8 @@ sup a {
 
 /* Media queries */
 
-/* Dark theme adjustments for components (manual toggle) */
-.dark-theme {
+/* Dark theme mixin for component-specific styles */
+@mixin dark-theme-components {
     a {
         color: var(--light-grey);
     }
@@ -393,39 +388,14 @@ sup a {
     }
 }
 
-/* Dark theme adjustments for components (system preference) */
-@media (prefers-color-scheme: dark)  {
-    
-    a {
-        color: var(--light-grey);
-    }
-    
-    section.cta a.cta--email {
-        border-color: var(--orange);
-    }
+/* Apply dark theme component styles via class (manual toggle) */
+.dark-theme {
+    @include dark-theme-components;
+}
 
-    section.cta a.cta--email:hover {
-        background-color: var(--light-grey);
-        border-color: var(--light-grey);
-    }
-    
-    section.cta a.cta--linkedin {
-        border-color: var(--light-grey);
-        color: var(--light-grey);
-    }
-
-    section.cta a.cta--linkedin:hover {
-        border-color: var(--orange);
-        color: var(--orange);
-    }
-
-    .footer-wrapper {
-        background-color:#111111;
-    }
-
-    #theme-toggle {
-        border-color: var(--light-grey);
-    }
+/* Apply dark theme component styles via media query (system preference) */
+@media (prefers-color-scheme: dark) {
+    @include dark-theme-components;
 }
 
 @media (prefers-color-scheme: light) {

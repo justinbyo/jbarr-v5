@@ -74,6 +74,7 @@ body {
   color: var(--dark-grey);
 }
 
+/* Dark theme mixin to avoid duplication */
 /* Dark theme support via class (for manual toggle) */
 .dark-theme {
   --light-grey-ish: #b6b6b6;
@@ -91,11 +92,11 @@ body {
   :root {
     --light-grey-ish: #b6b6b6;
   }
-  body {
+  :root body {
     background-color: #1b1f23;
     color: var(--light-grey);
   }
-  a {
+  :root a {
     color: var(--light-grey);
   }
 }
@@ -333,7 +334,8 @@ sup a {
 }
 
 /* Media queries */
-/* Dark theme adjustments for components (manual toggle) */
+/* Dark theme mixin for component-specific styles */
+/* Apply dark theme component styles via class (manual toggle) */
 .dark-theme a {
   color: var(--light-grey);
 }
@@ -359,7 +361,7 @@ sup a {
   border-color: var(--light-grey);
 }
 
-/* Dark theme adjustments for components (system preference) */
+/* Apply dark theme component styles via media query (system preference) */
 @media (prefers-color-scheme: dark) {
   a {
     color: var(--light-grey);
