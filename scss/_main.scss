@@ -92,10 +92,7 @@ body {
     }
 }
 
-@media (prefers-color-scheme: light) {
 
-    
-}
 
 section {
     margin: 0 auto;
@@ -112,6 +109,25 @@ section.navigation {
     padding: 20px 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+#theme-toggle {
+    background-color: var(--blue);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    height: 35px;
+    width: 35px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#theme-toggle:hover {
+    background-color: var(--orange);
 }
 
 section.hero {
@@ -324,40 +340,59 @@ sup a {
 
 /* Media queries */
 
-@media (prefers-color-scheme: dark)  {
-    
-    a {
-        color: var(--light-grey);
-    }
-    
-    section.cta a.cta--email {
-        border-color: var(--orange);
-    }
-
-    section.cta a.cta--email:hover {
-        background-color: var(--light-grey);
-        border-color: var(--light-grey);
-    }
-    
-    section.cta a.cta--linkedin {
-        border-color: var(--light-grey);
-        color: var(--light-grey);
-    }
-
-    section.cta a.cta--linkedin:hover {
-        border-color: var(--orange);
-        color: var(--orange);
-    }
-
-
-    .footer-wrapper {
-        background-color:#111111;
-    }
+/* Dark theme styles when .dark-theme class is applied to root */
+:root.dark-theme {
+    --light-grey-ish: #b6b6b6;
 }
 
-@media (prefers-color-scheme: light) {
-
+:root.dark-theme body {
+    background-color: #1b1f23;
+    color: var(--light-grey);
 }
+
+:root.dark-theme a {
+    color: var(--light-grey);
+}
+
+:root.dark-theme a:hover {
+    color: var(--orange);
+}
+
+:root.dark-theme sup a:hover {
+    color: var(--orange);
+}
+
+:root.dark-theme section.cta a.cta--email {
+    border-color: var(--orange);
+}
+
+:root.dark-theme section.cta a.cta--email:hover {
+    background-color: var(--light-grey);
+    border-color: var(--light-grey);
+    color: var(--dark-grey);
+}
+
+:root.dark-theme section.cta a.cta--linkedin {
+    border-color: var(--light-grey);
+    color: var(--light-grey);
+}
+
+:root.dark-theme section.cta a.cta--linkedin:hover {
+    border-color: var(--orange);
+    color: var(--orange);
+}
+
+:root.dark-theme .footer-wrapper {
+    background-color: #111111;
+}
+
+/* Use the media query only to set initial theme based on system preference */
+@media (prefers-color-scheme: dark) {
+    /* These styles will be applied only on initial load if system prefers dark */
+    /* The JS will then add the .dark-theme class to maintain this state */
+}
+
+
 
 /* Styles for devices with a maximum width of 767px (e.g., mobile phones in portrait mode) */
 @media (max-width: 767px) {
@@ -390,7 +425,10 @@ sup a {
     }
   }
 
-  @media (max-width: 580px) {
+@media (max-width: 580px) {
+    #theme-toggle {
+        display: none;
+    }
     
     section.cta {
         display: flex;
@@ -403,21 +441,4 @@ sup a {
     section.cta .cta--email {
         margin-bottom: var(--margin-small);
     }
-
-  }
-  
-  
-  /* Styles for devices with a minimum width of 768px and a maximum width of 991px (e.g., tablets) */
-  @media (min-width: 768px) and (max-width: 991px) {
-    /* Add your CSS styles here for medium-sized screens like tablets */
-  }
-  
-  /* Styles for devices with a minimum width of 992px and a maximum width of 1199px (e.g., desktops and smaller laptops) */
-  @media (min-width: 992px) and (max-width: 1199px) {
-    /* Add your CSS styles here for larger screens like desktops and smaller laptops */
-  }
-  
-  /* Styles for devices with a minimum width of 1200px and larger (e.g., larger desktops and laptops) */
-  @media (min-width: 1200px) {
-    /* Add your CSS styles here for the largest screens */
-  }  
+}  
