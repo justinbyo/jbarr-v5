@@ -76,27 +76,6 @@ body {
     color: var(--dark-grey);
 }
 
-@media (prefers-color-scheme: dark) {
-    
-    :root {
-        --light-grey-ish: #b6b6b6;
-    }
-    
-    body {
-        background-color: #1b1f23;
-        color: var(--light-grey);
-    }
-
-    a {
-        color: var(--light-grey);
-    }
-}
-
-@media (prefers-color-scheme: light) {
-
-    
-}
-
 section {
     margin: 0 auto;
     max-width: 800px;
@@ -127,20 +106,6 @@ img {
 
 
 /* Fonts */
-
-/* 
-From website v3
-    @light-gray: #f9f9f9;
-    @black: #222222;
-    @white:#ffffff;
-    @light-grey:#f1f1f1;
-    @grey:#989898;
-    @dark-grey:#666666;
-    @light-orange:;
-
-    @standard-border-size: 6px;
-    @2x-standard-border-size: 2 * @standard-border-size;
-*/
 
 
 
@@ -324,8 +289,16 @@ sup a {
 
 /* Media queries */
 
-@media (prefers-color-scheme: dark)  {
+@media (prefers-color-scheme: dark) {
+    :root {
+        --light-grey-ish: #b6b6b6;
+    }
     
+    body {
+        background-color: #1b1f23;
+        color: var(--light-grey);
+    }
+
     a {
         color: var(--light-grey);
     }
@@ -349,14 +322,9 @@ sup a {
         color: var(--orange);
     }
 
-
     .footer-wrapper {
         background-color:#111111;
     }
-}
-
-@media (prefers-color-scheme: light) {
-
 }
 
 /* Styles for devices with a maximum width of 767px (e.g., mobile phones in portrait mode) */
