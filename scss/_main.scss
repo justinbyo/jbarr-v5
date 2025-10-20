@@ -53,11 +53,7 @@ table {
 
 :root {
     --blue: #7fadc6;
-    
-    --light-orange: #ffd79c;
     --orange: #ff9900;
-    --dark-orange: #c94f00;
-    
 
     --border-small: 3px;
     --border-big: 6px;
@@ -75,23 +71,6 @@ body {
     background-color: var(--light-grey);
     color: var(--dark-grey);
 }
-
-@media (prefers-color-scheme: dark) {
-    
-    :root {
-        --light-grey-ish: #b6b6b6;
-    }
-    
-    body {
-        background-color: #1b1f23;
-        color: var(--light-grey);
-    }
-
-    a {
-        color: var(--light-grey);
-    }
-}
-
 
 
 section {
@@ -142,21 +121,7 @@ img {
 
 
 
-/* Fonts */
 
-/* 
-From website v3
-    @light-gray: #f9f9f9;
-    @black: #222222;
-    @white:#ffffff;
-    @light-grey:#f1f1f1;
-    @grey:#989898;
-    @dark-grey:#666666;
-    @light-orange:;
-
-    @standard-border-size: 6px;
-    @2x-standard-border-size: 2 * @standard-border-size;
-*/
 
 
 
