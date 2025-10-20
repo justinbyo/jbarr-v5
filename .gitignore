@@ -1,0 +1,17 @@
+# Node modules
+node_modules/
+
+# Build artifacts
+.sass-cache/
+*.css.map
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
