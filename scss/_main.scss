@@ -53,20 +53,14 @@ table {
 
 :root {
     --blue: #7fadc6;
-    
-    --light-orange: #ffd79c;
     --orange: #ff9900;
     --dark-orange: #c94f00;
-    
-
     --border-small: 3px;
     --border-big: 6px;
-
     --margin-small: 30px;
     --margin-medium: 60px;
     --margin-big: 90px;
-
-    --light-grey:#f9f9f9;
+    --light-grey: #f9f9f9;
     --light-grey-ish: #555555;
     --dark-grey: #24292e;
 }
@@ -74,27 +68,6 @@ table {
 body {
     background-color: var(--light-grey);
     color: var(--dark-grey);
-}
-
-@media (prefers-color-scheme: dark) {
-    
-    :root {
-        --light-grey-ish: #b6b6b6;
-    }
-    
-    body {
-        background-color: #1b1f23;
-        color: var(--light-grey);
-    }
-
-    a {
-        color: var(--light-grey);
-    }
-}
-
-@media (prefers-color-scheme: light) {
-
-    
 }
 
 section {
@@ -105,7 +78,7 @@ section {
 
 header {
     border-bottom: var(--border-big) solid var(--blue);
-    padding:0 20px;
+    padding: 0 20px;
 }
 
 section.navigation {
@@ -121,32 +94,10 @@ section.hero {
 img {
     display: block;
     max-width: 100%;
-    margin-bottom:var(--margin-small);
+    margin-bottom: var(--margin-small);
 }
 
-
-
 /* Fonts */
-
-/* 
-From website v3
-    @light-gray: #f9f9f9;
-    @black: #222222;
-    @white:#ffffff;
-    @light-grey:#f1f1f1;
-    @grey:#989898;
-    @dark-grey:#666666;
-    @light-orange:;
-
-    @standard-border-size: 6px;
-    @2x-standard-border-size: 2 * @standard-border-size;
-*/
-
-
-
-
-
-
 
 section.cta {
     display: flex;
@@ -156,19 +107,18 @@ section.cta {
 }
 
 section.cta a {
-    border-radius: 0 0 0 0;
+    border-radius: 0;
     border-style: solid;
     border-width: var(--border-small);
     box-sizing: border-box;
     display: block;
-    font-family: "Lato";
+    font-family: "Lato", sans-serif;
     font-size: 1rem;
     font-weight: 700;
-    margin:0 var(--margin-small);
+    margin: 0 var(--margin-small);
     padding: var(--margin-small);
-    text-align:center;
+    text-align: center;
 }
-
 
 section.cta a.cta--email {
     background-color: var(--orange);
@@ -199,7 +149,6 @@ section.footnotes {
 section.footnotes p {
     color: var(--light-grey-ish);
     font-size: .9rem;
-    
 }
 
 section.footnotes strong {
@@ -217,7 +166,7 @@ section.footnotes p a:hover {
 }
 
 .footer-wrapper {
-    background-color:var(--dark-grey);
+    background-color: var(--dark-grey);
 }
 
 section.footer {
@@ -230,7 +179,7 @@ section.footer li {
 }
 
 section.footer p {
- color: #b6b6b6;
+    color: #b6b6b6;
 }
 
 section.footer a {
@@ -239,7 +188,7 @@ section.footer a {
 
 section.footer p,
 section.footer a {
-    font-family: lato;
+    font-family: "Lato", sans-serif;
     font-weight: 400;
     font-size: 1rem;
     border-bottom: 0;
@@ -250,50 +199,47 @@ section.footer a:hover {
 }
 
 h1 {
-    font-family: "Lato";
+    font-family: "Lato", sans-serif;
     font-weight: 900;
     font-size: 1rem;
 }
 
 h1 span {
-    color:var(--light-grey-ish);
+    color: var(--light-grey-ish);
     font-weight: 500;
 }
 
 h2 {
-    /* "I'm a design-driven..." */
     display: inline;
-    font-family: "Noto Serif";
+    font-family: "Noto Serif", serif;
     font-size: 1.5rem;
-    line-height:2;
+    line-height: 2;
 }
 
 p {
-    font-family: "Noto Serif";
+    font-family: "Noto Serif", serif;
     font-size: 1.25rem;
     font-weight: 400;
-    line-height:1.65;
+    line-height: 1.65;
 }
 
 p.strong {
-    /* This is the headline "Hey..." */
-    font-family: "Lato";
+    font-family: "Lato", sans-serif;
     font-weight: 900;
     font-size: 3rem;
-    line-height:1;
+    line-height: 1;
     margin-bottom: var(--margin-small);
 }
 
 p.subtitle {
-    /* Say hey back... */
-    font-family: "Noto Serif";
+    font-family: "Noto Serif", serif;
     font-size: 1.5rem;
     line-height: 1;
     margin-bottom: var(--margin-small);
 }
 
 a { 
-    border-bottom:var(--border-small) solid var(--orange);
+    border-bottom: var(--border-small) solid var(--orange);
     color: var(--dark-grey);
     font-weight: 700;
     text-decoration: none;
@@ -322,10 +268,17 @@ sup a {
     border-bottom: 0;
 }
 
-/* Media queries */
-
-@media (prefers-color-scheme: dark)  {
+/* Dark theme via prefers-color-scheme */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --light-grey-ish: #b6b6b6;
+    }
     
+    body {
+        background-color: #1b1f23;
+        color: var(--light-grey);
+    }
+
     a {
         color: var(--light-grey);
     }
@@ -349,20 +302,13 @@ sup a {
         color: var(--orange);
     }
 
-
     .footer-wrapper {
-        background-color:#111111;
+        background-color: #111111;
     }
 }
 
-@media (prefers-color-scheme: light) {
-
-}
-
-/* Styles for devices with a maximum width of 767px (e.g., mobile phones in portrait mode) */
+/* Mobile styles */
 @media (max-width: 767px) {
-    /* Add your CSS styles here for smaller screens */
-
     section.hero {
         margin-top: var(--margin-medium);
     }
@@ -373,51 +319,26 @@ sup a {
 
     p {
         font-size: 1rem;
-        line-height:1.75;
+        line-height: 1.75;
     }
     
     p.strong {
-        /* This is the headline "Hey..." */
         font-size: 1.875rem;
     }
     
     p.subtitle {
-        /* Say hey back... */
-        font-family: "Noto Serif";
         font-size: 1rem;
-        line-height:2;
+        line-height: 2;
         margin-bottom: var(--margin-small);
     }
-  }
+}
 
-  @media (max-width: 580px) {
-    
+@media (max-width: 580px) {
     section.cta {
-        display: flex;
-        align-items: center;
         flex-direction: column;
-        justify-content: center;
-        margin: var(--margin-medium) 0;
     }
 
     section.cta .cta--email {
         margin-bottom: var(--margin-small);
     }
-
-  }
-  
-  
-  /* Styles for devices with a minimum width of 768px and a maximum width of 991px (e.g., tablets) */
-  @media (min-width: 768px) and (max-width: 991px) {
-    /* Add your CSS styles here for medium-sized screens like tablets */
-  }
-  
-  /* Styles for devices with a minimum width of 992px and a maximum width of 1199px (e.g., desktops and smaller laptops) */
-  @media (min-width: 992px) and (max-width: 1199px) {
-    /* Add your CSS styles here for larger screens like desktops and smaller laptops */
-  }
-  
-  /* Styles for devices with a minimum width of 1200px and larger (e.g., larger desktops and laptops) */
-  @media (min-width: 1200px) {
-    /* Add your CSS styles here for the largest screens */
-  }  
+}  
