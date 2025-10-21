@@ -18,9 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (isDark) {
       htmlElement.classList.add('dark-theme');
       themeToggleIcon.textContent = '\u2600\uFE0F'; // Sun icon
+      themeToggle.setAttribute('aria-label', 'Switch to light mode');
     } else {
       htmlElement.classList.remove('dark-theme');
       themeToggleIcon.textContent = '\u{1F319}'; // Moon icon
+      themeToggle.setAttribute('aria-label', 'Switch to dark mode');
     }
   };
   

@@ -58,7 +58,6 @@ table {
     --orange: #ff9900;
     --dark-orange: #c94f00;
     
-
     --border-small: 3px;
     --border-big: 6px;
 
@@ -69,6 +68,9 @@ table {
     --light-grey:#f9f9f9;
     --light-grey-ish: #555555;
     --dark-grey: #24292e;
+    
+    --font-serif: "Noto Serif", serif;
+    --font-sans: "Lato", sans-serif;
 }
 
 body {
@@ -215,7 +217,7 @@ section.cta a {
     border-width: var(--border-small);
     box-sizing: border-box;
     display: block;
-    font-family: "Lato";
+    font-family: var(--font-sans);
     font-size: 1rem;
     font-weight: 700;
     margin:0 var(--margin-small);
@@ -293,7 +295,7 @@ section.footer a {
 
 section.footer p,
 section.footer a {
-    font-family: lato;
+    font-family: var(--font-sans);
     font-weight: 400;
     font-size: 1rem;
     border-bottom: 0;
@@ -304,7 +306,7 @@ section.footer a:hover {
 }
 
 h1 {
-    font-family: "Lato";
+    font-family: var(--font-sans);
     font-weight: 900;
     font-size: 1rem;
 }
@@ -317,13 +319,13 @@ h1 span {
 h2 {
     /* "I'm a design-driven..." */
     display: inline;
-    font-family: "Noto Serif";
+    font-family: var(--font-serif);
     font-size: 1.5rem;
     line-height:2;
 }
 
 p {
-    font-family: "Noto Serif";
+    font-family: var(--font-serif);
     font-size: 1.25rem;
     font-weight: 400;
     line-height:1.65;
@@ -331,7 +333,7 @@ p {
 
 p.strong {
     /* This is the headline "Hey..." */
-    font-family: "Lato";
+    font-family: var(--font-sans);
     font-weight: 900;
     font-size: 3rem;
     line-height:1;
@@ -340,7 +342,7 @@ p.strong {
 
 p.subtitle {
     /* Say hey back... */
-    font-family: "Noto Serif";
+    font-family: var(--font-serif);
     font-size: 1.5rem;
     line-height: 1;
     margin-bottom: var(--margin-small);
@@ -428,7 +430,7 @@ sup a {
     }
     
     p.subtitle {
-        font-family: "Noto Serif";
+        font-family: var(--font-serif);
         font-size: 1rem;
         line-height:2;
         margin-bottom: var(--margin-small);
