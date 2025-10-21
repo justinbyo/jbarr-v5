@@ -74,15 +74,53 @@ body {
   color: var(--dark-grey);
 }
 
+/* Dark theme via class (for manual toggle) */
+.dark-theme {
+  background-color: #1b1f23;
+  color: var(--light-grey);
+}
+
+.dark-theme :root {
+  --light-grey-ish: #b6b6b6;
+}
+
+.dark-theme a {
+  color: var(--light-grey);
+}
+
+.dark-theme section.cta a.cta--email {
+  border-color: var(--orange);
+}
+
+.dark-theme section.cta a.cta--email:hover {
+  background-color: var(--light-grey);
+  border-color: var(--light-grey);
+}
+
+.dark-theme section.cta a.cta--linkedin {
+  border-color: var(--light-grey);
+  color: var(--light-grey);
+}
+
+.dark-theme section.cta a.cta--linkedin:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+.dark-theme .footer-wrapper {
+  background-color: #111111;
+}
+
+/* Dark theme via OS preference (fallback) */
 @media (prefers-color-scheme: dark) {
   :root {
     --light-grey-ish: #b6b6b6;
   }
-  body {
+  body:not(.dark-theme) {
     background-color: #1b1f23;
     color: var(--light-grey);
   }
-  a {
+  body:not(.dark-theme) a {
     color: var(--light-grey);
   }
 }
@@ -114,19 +152,6 @@ img {
 }
 
 /* Fonts */
-/* 
-From website v3
-    @light-gray: #f9f9f9;
-    @black: #222222;
-    @white:#ffffff;
-    @light-grey:#f1f1f1;
-    @grey:#989898;
-    @dark-grey:#666666;
-    @light-orange:;
-
-    @standard-border-size: 6px;
-    @2x-standard-border-size: 2 * @standard-border-size;
-*/
 section.cta {
   display: flex;
   align-items: center;
@@ -300,32 +325,32 @@ sup a {
 }
 
 /* Media queries */
+/* Dark theme for devices that prefer dark color scheme */
 @media (prefers-color-scheme: dark) {
-  a {
+  body:not(.dark-theme) a {
     color: var(--light-grey);
   }
-  section.cta a.cta--email {
+  body:not(.dark-theme) section.cta a.cta--email {
     border-color: var(--orange);
   }
-  section.cta a.cta--email:hover {
+  body:not(.dark-theme) section.cta a.cta--email:hover {
     background-color: var(--light-grey);
     border-color: var(--light-grey);
   }
-  section.cta a.cta--linkedin {
+  body:not(.dark-theme) section.cta a.cta--linkedin {
     border-color: var(--light-grey);
     color: var(--light-grey);
   }
-  section.cta a.cta--linkedin:hover {
+  body:not(.dark-theme) section.cta a.cta--linkedin:hover {
     border-color: var(--orange);
     color: var(--orange);
   }
-  .footer-wrapper {
+  body:not(.dark-theme) .footer-wrapper {
     background-color: #111111;
   }
 }
-/* Styles for devices with a maximum width of 767px (e.g., mobile phones in portrait mode) */
+/* Mobile devices (portrait) */
 @media (max-width: 767px) {
-  /* Add your CSS styles here for smaller screens */
   section.hero {
     margin-top: var(--margin-medium);
   }
@@ -337,17 +362,16 @@ sup a {
     line-height: 1.75;
   }
   p.strong {
-    /* This is the headline "Hey..." */
     font-size: 1.875rem;
   }
   p.subtitle {
-    /* Say hey back... */
     font-family: "Noto Serif";
     font-size: 1rem;
     line-height: 2;
     margin-bottom: var(--margin-small);
   }
 }
+/* Smaller mobile devices */
 @media (max-width: 580px) {
   section.cta {
     display: flex;
@@ -359,18 +383,6 @@ sup a {
   section.cta .cta--email {
     margin-bottom: var(--margin-small);
   }
-}
-/* Styles for devices with a minimum width of 768px and a maximum width of 991px (e.g., tablets) */
-@media (min-width: 768px) and (max-width: 991px) {
-  /* Add your CSS styles here for medium-sized screens like tablets */
-}
-/* Styles for devices with a minimum width of 992px and a maximum width of 1199px (e.g., desktops and smaller laptops) */
-@media (min-width: 992px) and (max-width: 1199px) {
-  /* Add your CSS styles here for larger screens like desktops and smaller laptops */
-}
-/* Styles for devices with a minimum width of 1200px and larger (e.g., larger desktops and laptops) */
-@media (min-width: 1200px) {
-  /* Add your CSS styles here for the largest screens */
 }
 
 /*# sourceMappingURL=styles.css.map */
