@@ -55,47 +55,53 @@ table {
 
 /* Theme */
 :root {
+  /* Colors */
   --blue: #7fadc6;
   --light-orange: #ffd79c;
   --orange: #ff9900;
   --dark-orange: #c94f00;
+  --light-grey: #f9f9f9;
+  --light-grey-ish: #555555;
+  --dark-grey: #24292e;
+  --dark-bg: #1b1f23;
+  --dark-footer-bg: #111111;
+  /* Spacing */
   --border-small: 3px;
   --border-big: 6px;
   --margin-small: 30px;
   --margin-medium: 60px;
   --margin-big: 90px;
-  --light-grey:#f9f9f9;
-  --light-grey-ish: #555555; /* this works for both themes */
-  --dark-grey: #24292e;
+  /* Light theme defaults */
+  --bg-color: var(--light-grey);
+  --text-color: var(--dark-grey);
+  --link-color: var(--dark-grey);
+  --secondary-text: var(--light-grey-ish);
+  --footer-bg: var(--dark-grey);
+  --footer-text: #b6b6b6;
 }
 
-body {
-  background-color: var(--light-grey);
-  color: var(--dark-grey);
+/* Dark theme overrides using class */
+html.dark-theme {
+  --bg-color: var(--dark-bg);
+  --text-color: var(--light-grey);
+  --link-color: var(--light-grey);
+  --secondary-text: #b6b6b6;
+  --footer-bg: var(--dark-footer-bg);
 }
 
-/* Dark theme styles when .dark-theme class is applied to root */
-:root.dark-theme {
-  --light-grey-ish: #b6b6b6;
-}
-
-:root.dark-theme body {
-  background-color: #1b1f23;
-  color: var(--light-grey);
-}
-
-:root.dark-theme a {
-  color: var(--light-grey);
-}
-
-:root.dark-theme a:hover {
-  color: var(--orange);
-}
-
-/* Use the media query only to set initial theme based on system preference */
+/* System preference fallback */
 @media (prefers-color-scheme: dark) {
-  /* These styles will be applied only on initial load if system prefers dark */
-  /* The JS will then add the .dark-theme class to maintain this state */
+  :root:not(.dark-theme):not(.light-theme) {
+    --bg-color: var(--dark-bg);
+    --text-color: var(--light-grey);
+    --link-color: var(--light-grey);
+    --secondary-text: #b6b6b6;
+    --footer-bg: var(--dark-footer-bg);
+  }
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 section {
@@ -113,25 +119,6 @@ section.navigation {
   padding: 20px 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-}
-
-#theme-toggle {
-  background-color: var(--blue);
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 1.2rem;
-  height: 35px;
-  width: 35px;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#theme-toggle:hover {
-  background-color: var(--orange);
 }
 
 section.hero {
@@ -144,20 +131,7 @@ img {
   margin-bottom: var(--margin-small);
 }
 
-/* Fonts */
-/* 
-From website v3
-    @light-gray: #f9f9f9;
-    @black: #222222;
-    @white:#ffffff;
-    @light-grey:#f1f1f1;
-    @grey:#989898;
-    @dark-grey:#666666;
-    @light-orange:;
-
-    @standard-border-size: 6px;
-    @2x-standard-border-size: 2 * @standard-border-size;
-*/
+/* Typography and Links */
 section.cta {
   display: flex;
   align-items: center;
@@ -191,8 +165,8 @@ section.cta a.cta--email:hover {
 }
 
 section.cta .cta--linkedin {
-  border-color: var(--dark-grey);
-  color: var(--dark-grey);
+  border-color: var(--secondary-text);
+  color: var(--secondary-text);
 }
 
 section.cta .cta--linkedin:hover {
@@ -200,30 +174,13 @@ section.cta .cta--linkedin:hover {
   color: var(--orange);
 }
 
-footer {
-  padding: 0 var(--margin-small);
-}
-
-section.footer {
-  border-top: var(--border-small) solid var(--light-grey-ish);
-  padding-top: var(--margin-small);
-  padding-bottom: var(--margin-small);
-  border: var(--border-small) dashed var(--blue);
-}
-
-section.footer li {
-  font-family: "Lato";
-  font-size: 1rem;
-  font-weight: 700;
-}
-
 section.footnotes {
-  /* border-top: var(--border-small) solid var(--light-grey-ish); */
+  border-top: var(--border-small) solid var(--secondary-text);
   padding: var(--margin-medium) 20px;
 }
 
 section.footnotes p {
-  color: var(--light-grey-ish);
+  color: var(--secondary-text);
   font-size: 0.9rem;
 }
 
@@ -233,12 +190,45 @@ section.footnotes strong {
 
 section.footnotes p a {
   border-bottom-width: 1px;
-  color: var(--light-grey-ish);
+  color: var(--secondary-text);
   font-weight: 500;
 }
 
 section.footnotes p a:hover {
   color: var(--orange);
+}
+
+.footer-wrapper {
+  background-color: var(--footer-bg);
+}
+
+section.footer {
+  padding: var(--margin-medium) 20px;
+}
+
+section.footer p,
+section.footer li {
+  margin-bottom: 1rem;
+}
+
+section.footer p {
+  color: var(--footer-text);
+}
+
+section.footer a {
+  color: var(--blue);
+}
+
+section.footer p,
+section.footer a {
+  font-family: lato;
+  font-weight: 400;
+  font-size: 1rem;
+  border-bottom: 0;
+}
+
+section.footer a:hover {
+  color: var(--light-grey);
 }
 
 h1 {
@@ -248,7 +238,7 @@ h1 {
 }
 
 h1 span {
-  color: var(--light-grey-ish);
+  color: var(--secondary-text);
   font-weight: 500;
 }
 
@@ -286,20 +276,13 @@ p.subtitle {
 
 a {
   border-bottom: var(--border-small) solid var(--orange);
-  color: var(--dark-grey);
+  color: var(--link-color);
   font-weight: 700;
   text-decoration: none;
 }
 
 a:hover {
   color: var(--orange);
-}
-
-li {
-  font-family: "Noto Serif";
-  font-size: 1.25rem;
-  font-weight: 400;
-  line-height: 1.85;
 }
 
 sup {
@@ -321,87 +304,65 @@ sup a {
   border-bottom: 0;
 }
 
-/* Media queries */
-/* Dark theme styles for various elements */
-:root.dark-theme sup a:hover {
-  color: var(--orange)
-}
-
-:root.dark-theme section.cta a.cta--email {
+/* Dark theme specific styles */
+html.dark-theme section.cta a.cta--email {
   border-color: var(--orange);
 }
 
-:root.dark-theme section.cta a.cta--email:hover {
+html.dark-theme section.cta a.cta--email:hover {
   background-color: var(--light-grey);
   border-color: var(--light-grey);
-  color: var(--dark-grey)
 }
 
-:root.dark-theme section.cta a.cta--linkedin {
+html.dark-theme section.cta a.cta--linkedin {
   border-color: var(--light-grey);
   color: var(--light-grey);
 }
 
-:root.dark-theme section.cta a.cta--linkedin:hover {
-  border-color: var(--orange);
-  color: var(--orange);
+/* System dark mode fallback */
+@media (prefers-color-scheme: dark) {
+  :root:not(.dark-theme):not(.light-theme) section.cta a.cta--email {
+    border-color: var(--orange);
+  }
+  :root:not(.dark-theme):not(.light-theme) section.cta a.cta--email:hover {
+    background-color: var(--light-grey);
+    border-color: var(--light-grey);
+  }
+  :root:not(.dark-theme):not(.light-theme) section.cta a.cta--linkedin {
+    border-color: var(--light-grey);
+    color: var(--light-grey);
+  }
 }
-
-
-
-/* Styles for devices with a maximum width of 767px (e.g., mobile phones in portrait mode) */
+/* Responsive Design */
+/* Mobile phones in portrait mode */
 @media (max-width: 767px) {
-  /* Add your CSS styles here for smaller screens */
   section.hero {
     margin-top: var(--margin-medium);
   }
   h2 {
     font-size: 1rem;
-    line-height: 1.75
   }
   p {
     font-size: 1rem;
     line-height: 1.75;
   }
   p.strong {
-    /* This is the headline "Hey..." */
     font-size: 1.875rem;
   }
   p.subtitle {
-    /* Say hey back... */
-    font-family: "Noto Serif";
     font-size: 1rem;
-    line-height: 1.75;
+    line-height: 2;
     margin-bottom: var(--margin-small);
   }
 }
+/* Small mobile devices */
 @media (max-width: 580px) {
-  #theme-toggle {
-    display: none;
-  }
-  
   section.cta {
-    display: flex;
-    align-items: center;
     flex-direction: column;
-    justify-content: center;
-    margin: var(--margin-medium) 0;
   }
   section.cta .cta--email {
     margin-bottom: var(--margin-small);
   }
-}
-/* Styles for devices with a minimum width of 768px and a maximum width of 991px (e.g., tablets) */
-@media (min-width: 768px) and (max-width: 991px) {
-  /* Add your CSS styles here for medium-sized screens like tablets */
-}
-/* Styles for devices with a minimum width of 992px and a maximum width of 1199px (e.g., desktops and smaller laptops) */
-@media (min-width: 992px) and (max-width: 1199px) {
-  /* Add your CSS styles here for larger screens like desktops and smaller laptops */
-}
-/* Styles for devices with a minimum width of 1200px and larger (e.g., larger desktops and laptops) */
-@media (min-width: 1200px) {
-  /* Add your CSS styles here for the largest screens */
 }
 
 /*# sourceMappingURL=styles.css.map */
