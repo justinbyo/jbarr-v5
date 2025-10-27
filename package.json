@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch scss/styles.scss docs/css/styles.css",
+    "sass": "sass --watch scss/styles.scss docs/css/styles.css --no-source-map",
     "start": "live-server --entry-file=docs/index.html --mount=/:docs"
   },
   "keywords": [],
