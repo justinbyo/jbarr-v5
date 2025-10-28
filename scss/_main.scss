@@ -321,7 +321,7 @@ sup a {
 
 /* Dark theme styles for various elements when .dark-theme class is applied */
 :root.dark-theme sup a:hover {
-    color: var(--orange)
+    color: var(--orange);
 }
 
 :root.dark-theme section.cta a.cta--email {
@@ -331,7 +331,7 @@ sup a {
 :root.dark-theme section.cta a.cta--email:hover {
     background-color: var(--light-grey);
     border-color: var(--light-grey);
-    color: var(--dark-grey)
+    color: var(--dark-grey);
 }
 
 :root.dark-theme section.cta a.cta--linkedin {
@@ -345,7 +345,7 @@ sup a {
 }
 
 :root.dark-theme .footer-wrapper {
-    background-color:#111111;
+    background-color: #111111;
 }
 
 /* Media queries */
@@ -385,7 +385,7 @@ sup a {
     }
 
     .footer-wrapper {
-        background-color:#111111;
+        background-color: #111111;
     }
 }
 
