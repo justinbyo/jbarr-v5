@@ -51,50 +51,20 @@ table {
 
 /* Theme */
 
-:root {
-    --blue: #7fadc6;
-    
-    --light-orange: #ffd79c;
-    --orange: #ff9900;
-    --dark-orange: #c94f00;
-    
-
-    --border-small: 3px;
-    --border-big: 6px;
-
-    --margin-small: 30px;
-    --margin-medium: 60px;
-    --margin-big: 90px;
-
-    --light-grey:#f9f9f9;
-    --light-grey-ish: #555555;
-    --dark-grey: #24292e;
-}
-
 body {
-    background-color: var(--light-grey);
+    background-color: var(--red);
     color: var(--dark-grey);
 }
 
 @media (prefers-color-scheme: dark) {
-    
-    :root {
-        --light-grey-ish: #b6b6b6;
-    }
-    
     body {
-        background-color: #1b1f23;
+        background-color: var(--red);
         color: var(--light-grey);
     }
 
     a {
         color: var(--light-grey);
     }
-}
-
-@media (prefers-color-scheme: light) {
-
-    
 }
 
 section {
