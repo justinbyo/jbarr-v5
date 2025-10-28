@@ -133,29 +133,7 @@ img {
     margin-bottom:var(--margin-small);
 }
 
-
-
 /* Fonts */
-
-/* 
-From website v3
-    @light-gray: #f9f9f9;
-    @black: #222222;
-    @white:#ffffff;
-    @light-grey:#f1f1f1;
-    @grey:#989898;
-    @dark-grey:#666666;
-    @light-orange:;
-
-    @standard-border-size: 6px;
-    @2x-standard-border-size: 2 * @standard-border-size;
-*/
-
-
-
-
-
-
 
 section.cta {
     display: flex;
@@ -436,19 +414,3 @@ sup a {
     }
 
   }
-  
-  
-  /* Styles for devices with a minimum width of 768px and a maximum width of 991px (e.g., tablets) */
-  @media (min-width: 768px) and (max-width: 991px) {
-    /* Add your CSS styles here for medium-sized screens like tablets */
-  }
-  
-  /* Styles for devices with a minimum width of 992px and a maximum width of 1199px (e.g., desktops and smaller laptops) */
-  @media (min-width: 992px) and (max-width: 1199px) {
-    /* Add your CSS styles here for larger screens like desktops and smaller laptops */
-  }
-  
-  /* Styles for devices with a minimum width of 1200px and larger (e.g., larger desktops and laptops) */
-  @media (min-width: 1200px) {
-    /* Add your CSS styles here for the largest screens */
-  }  
