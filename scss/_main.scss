@@ -76,25 +76,18 @@ body {
     color: var(--dark-grey);
 }
 
-@media (prefers-color-scheme: dark) {
-    
-    :root {
-        --light-grey-ish: #b6b6b6;
-    }
-    
-    body {
-        background-color: #1b1f23;
-        color: var(--light-grey);
-    }
-
-    a {
-        color: var(--light-grey);
-    }
+/* Dark theme styles when .dark-theme class is applied to root */
+:root.dark-theme {
+    --light-grey-ish: #b6b6b6;
 }
 
-@media (prefers-color-scheme: light) {
+:root.dark-theme body {
+    background-color: #1b1f23;
+    color: var(--light-grey);
+}
 
-    
+:root.dark-theme a {
+    color: var(--light-grey);
 }
 
 section {
@@ -112,6 +105,7 @@ section.navigation {
     padding: 20px 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 section.hero {
@@ -156,7 +150,6 @@ section.cta {
 }
 
 section.cta a {
-    border-radius: 0 0 0 0;
     border-style: solid;
     border-width: var(--border-small);
     box-sizing: border-box;
@@ -324,6 +317,31 @@ sup a {
 
 /* Media queries */
 
+/* Dark theme class-based styles for JavaScript toggle */
+:root.dark-theme section.cta a.cta--email {
+    border-color: var(--orange);
+}
+
+:root.dark-theme section.cta a.cta--email:hover {
+    background-color: var(--light-grey);
+    border-color: var(--light-grey);
+    color: var(--dark-grey);
+}
+
+:root.dark-theme section.cta a.cta--linkedin {
+    border-color: var(--light-grey);
+    color: var(--light-grey);
+}
+
+:root.dark-theme section.cta a.cta--linkedin:hover {
+    border-color: var(--orange);
+    color: var(--orange);
+}
+
+/* System preference dark mode (initial load only) 
+   Note: Intentional duplication with .dark-theme class above.
+   Media query handles initial system preference detection,
+   while .dark-theme class handles user's manual toggle. */
 @media (prefers-color-scheme: dark)  {
     
     a {
@@ -353,10 +371,6 @@ sup a {
     .footer-wrapper {
         background-color:#111111;
     }
-}
-
-@media (prefers-color-scheme: light) {
-
 }
 
 /* Styles for devices with a maximum width of 767px (e.g., mobile phones in portrait mode) */
@@ -405,19 +419,3 @@ sup a {
     }
 
   }
-  
-  
-  /* Styles for devices with a minimum width of 768px and a maximum width of 991px (e.g., tablets) */
-  @media (min-width: 768px) and (max-width: 991px) {
-    /* Add your CSS styles here for medium-sized screens like tablets */
-  }
-  
-  /* Styles for devices with a minimum width of 992px and a maximum width of 1199px (e.g., desktops and smaller laptops) */
-  @media (min-width: 992px) and (max-width: 1199px) {
-    /* Add your CSS styles here for larger screens like desktops and smaller laptops */
-  }
-  
-  /* Styles for devices with a minimum width of 1200px and larger (e.g., larger desktops and laptops) */
-  @media (min-width: 1200px) {
-    /* Add your CSS styles here for the largest screens */
-  }  
