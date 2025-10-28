@@ -1,9 +1,6 @@
 # Dependencies
 node_modules/
 
-# Build files
-*.map
-
 # OS files
 .DS_Store
 Thumbs.db

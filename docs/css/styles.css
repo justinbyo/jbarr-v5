@@ -74,6 +74,20 @@ body {
   color: var(--dark-grey);
 }
 
+/* Dark theme styles when .dark-theme class is applied to root */
+:root.dark-theme {
+  --light-grey-ish: #b6b6b6;
+}
+
+:root.dark-theme body {
+  background-color: #1b1f23;
+  color: var(--light-grey);
+}
+
+:root.dark-theme a {
+  color: var(--light-grey);
+}
+
 section {
   margin: 0 auto;
   max-width: 800px;
@@ -89,6 +103,7 @@ section.navigation {
   padding: 20px 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 section.hero {
@@ -287,6 +302,28 @@ sup a {
 }
 
 /* Media queries */
+/* Dark theme styles when .dark-theme class is applied */
+:root.dark-theme section.cta a.cta--email {
+  border-color: var(--orange);
+}
+
+:root.dark-theme section.cta a.cta--email:hover {
+  background-color: var(--light-grey);
+  border-color: var(--light-grey);
+  color: var(--dark-grey);
+}
+
+:root.dark-theme section.cta a.cta--linkedin {
+  border-color: var(--light-grey);
+  color: var(--light-grey);
+}
+
+:root.dark-theme section.cta a.cta--linkedin:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+/* System preference dark mode (initial load only) */
 @media (prefers-color-scheme: dark) {
   a {
     color: var(--light-grey);
