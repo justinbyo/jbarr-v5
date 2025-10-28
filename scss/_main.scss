@@ -76,27 +76,6 @@ body {
     color: var(--dark-grey);
 }
 
-@media (prefers-color-scheme: dark) {
-    
-    :root {
-        --light-grey-ish: #b6b6b6;
-    }
-    
-    body {
-        background-color: #1b1f23;
-        color: var(--light-grey);
-    }
-
-    a {
-        color: var(--light-grey);
-    }
-}
-
-@media (prefers-color-scheme: light) {
-
-    
-}
-
 section {
     margin: 0 auto;
     max-width: 800px;
@@ -156,7 +135,6 @@ section.cta {
 }
 
 section.cta a {
-    border-radius: 0 0 0 0;
     border-style: solid;
     border-width: var(--border-small);
     box-sizing: border-box;
@@ -355,10 +333,6 @@ sup a {
     }
 }
 
-@media (prefers-color-scheme: light) {
-
-}
-
 /* Styles for devices with a maximum width of 767px (e.g., mobile phones in portrait mode) */
 @media (max-width: 767px) {
     /* Add your CSS styles here for smaller screens */
@@ -405,19 +379,3 @@ sup a {
     }
 
   }
-  
-  
-  /* Styles for devices with a minimum width of 768px and a maximum width of 991px (e.g., tablets) */
-  @media (min-width: 768px) and (max-width: 991px) {
-    /* Add your CSS styles here for medium-sized screens like tablets */
-  }
-  
-  /* Styles for devices with a minimum width of 992px and a maximum width of 1199px (e.g., desktops and smaller laptops) */
-  @media (min-width: 992px) and (max-width: 1199px) {
-    /* Add your CSS styles here for larger screens like desktops and smaller laptops */
-  }
-  
-  /* Styles for devices with a minimum width of 1200px and larger (e.g., larger desktops and laptops) */
-  @media (min-width: 1200px) {
-    /* Add your CSS styles here for the largest screens */
-  }  
