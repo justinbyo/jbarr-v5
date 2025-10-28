@@ -317,7 +317,7 @@ sup a {
 
 /* Media queries */
 
-/* Dark theme styles when .dark-theme class is applied */
+/* Dark theme class-based styles for JavaScript toggle */
 :root.dark-theme section.cta a.cta--email {
     border-color: var(--orange);
 }
@@ -338,7 +338,10 @@ sup a {
     color: var(--orange);
 }
 
-/* System preference dark mode (initial load only) */
+/* System preference dark mode (initial load only) 
+   Note: Intentional duplication with .dark-theme class above.
+   Media query handles initial system preference detection,
+   while .dark-theme class handles user's manual toggle. */
 @media (prefers-color-scheme: dark)  {
     
     a {
