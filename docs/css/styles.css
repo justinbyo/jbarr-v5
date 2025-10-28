@@ -86,7 +86,7 @@ body {
     color: var(--light-grey);
   }
 }
-html.dark-theme {
+html.dark-theme :root {
   --light-grey-ish: #b6b6b6;
 }
 html.dark-theme body {
