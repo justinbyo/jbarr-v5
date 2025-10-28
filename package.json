@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch scss/styles.scss docs/css/styles.css",
+    "sass:build": "sass scss/styles.scss docs/css/styles.css --style=compressed",
     "start": "live-server --entry-file=docs/index.html --mount=/:docs"
   },
   "keywords": [],
