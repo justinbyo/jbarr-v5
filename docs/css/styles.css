@@ -281,29 +281,29 @@ sup a {
   :root {
     --light-grey-ish: #b6b6b6;
   }
-  :root body {
+  body {
     background-color: #1b1f23;
     color: var(--light-grey);
   }
-  :root a {
+  a {
     color: var(--light-grey);
   }
-  :root section.cta a.cta--email {
+  section.cta a.cta--email {
     border-color: var(--orange);
   }
-  :root section.cta a.cta--email:hover {
+  section.cta a.cta--email:hover {
     background-color: var(--light-grey);
     border-color: var(--light-grey);
   }
-  :root section.cta a.cta--linkedin {
+  section.cta a.cta--linkedin {
     border-color: var(--light-grey);
     color: var(--light-grey);
   }
-  :root section.cta a.cta--linkedin:hover {
+  section.cta a.cta--linkedin:hover {
     border-color: var(--orange);
     color: var(--orange);
   }
-  :root .footer-wrapper {
+  .footer-wrapper {
     background-color: #111111;
   }
 }

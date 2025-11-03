@@ -285,8 +285,6 @@ sup a {
 
 /* Dark theme mixin to avoid duplication */
 @mixin dark-theme-styles {
-    --light-grey-ish: #b6b6b6;
-    
     body {
         background-color: #1b1f23;
         color: var(--light-grey);
@@ -323,12 +321,16 @@ sup a {
 /* Apply dark theme for OS preference */
 @media (prefers-color-scheme: dark) {
     :root {
-        @include dark-theme-styles;
+        --light-grey-ish: #b6b6b6;
     }
+    
+    @include dark-theme-styles;
 }
 
 /* Apply dark theme for manual toggle */
 .dark-theme {
+    --light-grey-ish: #b6b6b6;
+    
     @include dark-theme-styles;
 }
 
