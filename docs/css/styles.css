@@ -275,37 +275,39 @@ sup a {
 }
 
 /* Media queries */
+/* Dark theme mixin to avoid duplication */
+/* Apply dark theme for OS preference */
 @media (prefers-color-scheme: dark) {
   :root {
     --light-grey-ish: #b6b6b6;
   }
-  body {
+  :root body {
     background-color: #1b1f23;
     color: var(--light-grey);
   }
-  a {
+  :root a {
     color: var(--light-grey);
   }
-  section.cta a.cta--email {
+  :root section.cta a.cta--email {
     border-color: var(--orange);
   }
-  section.cta a.cta--email:hover {
+  :root section.cta a.cta--email:hover {
     background-color: var(--light-grey);
     border-color: var(--light-grey);
   }
-  section.cta a.cta--linkedin {
+  :root section.cta a.cta--linkedin {
     border-color: var(--light-grey);
     color: var(--light-grey);
   }
-  section.cta a.cta--linkedin:hover {
+  :root section.cta a.cta--linkedin:hover {
     border-color: var(--orange);
     color: var(--orange);
   }
-  .footer-wrapper {
+  :root .footer-wrapper {
     background-color: #111111;
   }
 }
-/* Manual dark theme toggle */
+/* Apply dark theme for manual toggle */
 .dark-theme {
   --light-grey-ish: #b6b6b6;
 }

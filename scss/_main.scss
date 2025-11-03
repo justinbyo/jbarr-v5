@@ -283,11 +283,9 @@ sup a {
 
 /* Media queries */
 
-@media (prefers-color-scheme: dark) {
-    
-    :root {
-        --light-grey-ish: #b6b6b6;
-    }
+/* Dark theme mixin to avoid duplication */
+@mixin dark-theme-styles {
+    --light-grey-ish: #b6b6b6;
     
     body {
         background-color: #1b1f23;
@@ -322,42 +320,16 @@ sup a {
     }
 }
 
-/* Manual dark theme toggle */
+/* Apply dark theme for OS preference */
+@media (prefers-color-scheme: dark) {
+    :root {
+        @include dark-theme-styles;
+    }
+}
+
+/* Apply dark theme for manual toggle */
 .dark-theme {
-    
-    --light-grey-ish: #b6b6b6;
-    
-    body {
-        background-color: #1b1f23;
-        color: var(--light-grey);
-    }
-
-    a {
-        color: var(--light-grey);
-    }
-    
-    section.cta a.cta--email {
-        border-color: var(--orange);
-    }
-
-    section.cta a.cta--email:hover {
-        background-color: var(--light-grey);
-        border-color: var(--light-grey);
-    }
-    
-    section.cta a.cta--linkedin {
-        border-color: var(--light-grey);
-        color: var(--light-grey);
-    }
-
-    section.cta a.cta--linkedin:hover {
-        border-color: var(--orange);
-        color: var(--orange);
-    }
-
-    .footer-wrapper {
-        background-color:#111111;
-    }
+    @include dark-theme-styles;
 }
 
 /* Styles for devices with a maximum width of 767px (e.g., mobile phones in portrait mode) */
