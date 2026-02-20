@@ -321,6 +321,215 @@ sup a {
   border-bottom: 0;
 }
 
+/* ── Nav home link (case-study page header) ── */
+a.nav-home-link {
+  border-bottom: 0;
+  color: inherit;
+  font-family: "Lato";
+  font-weight: 900;
+}
+
+a.nav-home-link:hover {
+  color: var(--orange);
+}
+
+a.nav-home-link span {
+  color: var(--light-grey-ish);
+  font-weight: 500;
+}
+
+/* ── Work / case-study card on homepage ── */
+section.work {
+  margin-top: var(--margin-big);
+  margin-bottom: var(--margin-medium);
+}
+
+section.work h3 {
+  font-family: "Lato";
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--light-grey-ish);
+  margin-bottom: var(--margin-small);
+}
+
+ul.work-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a.work-item {
+  border-bottom: 0;
+  border: var(--border-small) solid var(--blue);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: var(--margin-small);
+  color: var(--dark-grey);
+  text-decoration: none;
+  transition: border-color 0.15s ease;
+}
+
+a.work-item:hover {
+  border-color: var(--orange);
+  color: var(--dark-grey);
+}
+
+.work-item-company {
+  font-family: "Lato";
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--light-grey-ish);
+}
+
+.work-item-title {
+  font-family: "Noto Serif";
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.work-item-cta {
+  font-family: "Lato";
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--orange);
+  margin-top: 4px;
+}
+
+/* ── Case study page ── */
+section.case-study-hero {
+  margin-top: var(--margin-big);
+  margin-bottom: var(--margin-medium);
+}
+
+p.case-study-label {
+  font-family: "Lato";
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--light-grey-ish);
+  margin-bottom: 12px;
+}
+
+h2.case-study-title {
+  display: block;
+  font-family: "Noto Serif";
+  font-size: 2rem;
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+p.case-study-subtitle {
+  font-family: "Noto Serif";
+  font-size: 1.15rem;
+  color: var(--light-grey-ish);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+section.case-study-meta {
+  border-top: var(--border-small) solid var(--blue);
+  border-bottom: var(--border-small) solid var(--blue);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--margin-small);
+  padding: var(--margin-small) 20px;
+  margin-bottom: var(--margin-medium);
+}
+
+.case-study-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 120px;
+}
+
+p.meta-label {
+  font-family: "Lato";
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--light-grey-ish);
+  line-height: 1;
+}
+
+p.meta-value {
+  font-family: "Lato";
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+section.case-study-body {
+  margin-bottom: var(--margin-big);
+}
+
+section.case-study-body h3 {
+  font-family: "Lato";
+  font-size: 1rem;
+  font-weight: 900;
+  margin-top: var(--margin-medium);
+  margin-bottom: 16px;
+}
+
+section.case-study-body p {
+  margin-bottom: 16px;
+}
+
+ul.case-study-list {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 16px;
+}
+
+ul.case-study-list li {
+  font-family: "Noto Serif";
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.65;
+  margin-bottom: 8px;
+}
+
+section.case-study-back {
+  margin-bottom: var(--margin-big);
+}
+
+a.back-link {
+  border-bottom: 0;
+  font-family: "Lato";
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--light-grey-ish);
+}
+
+a.back-link:hover {
+  color: var(--orange);
+}
+
+/* Dark theme overrides */
+:root.dark-theme a.work-item {
+  color: var(--light-grey);
+}
+
+:root.dark-theme a.work-item:hover {
+  color: var(--light-grey);
+}
+
+:root.dark-theme a.nav-home-link {
+  color: var(--light-grey);
+}
+
+:root.dark-theme a.nav-home-link:hover {
+  color: var(--orange);
+}
+
 /* Media queries */
 /* Dark theme styles for various elements */
 :root.dark-theme sup a:hover {
@@ -359,6 +568,9 @@ sup a {
     font-size: 1rem;
     line-height: 1.75
   }
+  h2.case-study-title {
+    font-size: 1.5rem;
+  }
   p {
     font-size: 1rem;
     line-height: 1.75;
@@ -373,6 +585,14 @@ sup a {
     font-size: 1rem;
     line-height: 1.75;
     margin-bottom: var(--margin-small);
+  }
+  ul.case-study-list li {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+  section.case-study-meta {
+    flex-direction: column;
+    gap: 16px;
   }
 }
 @media (max-width: 580px) {
